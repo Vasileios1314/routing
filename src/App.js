@@ -9,10 +9,11 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-
+      <h1>◓ Pokemons ◓</h1>
       <Routes>
         <Route path="/discover" element={<DiscoverPage />} />
-        <Route path="/about" element={<AboutPage />} />
+        <Route path=":filter" element={<DiscoverPage />} />
+        <Route path="/about/:name" element={<AboutPage />} />
         <Route path="/" element={<HomePage />} />
       </Routes>
     </div>
